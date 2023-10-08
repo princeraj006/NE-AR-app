@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return ResponsiveSizer(builder: (context, orientation, screenType) {
       return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'NA-ER',
+        title: 'NE-AR',
         theme: ThemeData(
             colorScheme: ColorScheme.light(
                 primary: Color(int.parse("#389C9A".substring(1, 7), radix: 16) +

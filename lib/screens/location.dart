@@ -38,17 +38,17 @@ class _Location1State extends State<Location1> {
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          // child: const ModelViewer(
-          //   backgroundColor: Color.fromARGB(0xFF, 0xEE, 0xEE, 0xEE),
-          //   src: 'assets/models/HeardIsland.gltf',
-          //   alt: 'A 3D model',
-          //   ar: true,
+          child: const ModelViewer(
+            backgroundColor: Color.fromARGB(0xFF, 0xEE, 0xEE, 0xEE),
+            src: 'assets/models/HeardIsland.gltf',
+            alt: 'A 3D model',
+            ar: true,
 
-          //   autoRotate: true,
-          //   // iosSrc: 'https://modelviewer.dev/shared-assets/models/Astronaut.usdz',
-          //   disableZoom: true,
-          // ),
-          child: WebViewWidget(controller: controller),
+            autoRotate: true,
+            // iosSrc: 'https://modelviewer.dev/shared-assets/models/Astronaut.usdz',
+            disableZoom: true,
+          ),
+          // child: WebViewWidget(controller: controller),
         ),
       ),
     );
