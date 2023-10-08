@@ -1,10 +1,14 @@
 import 'package:agriguru/helpers.dart';
-import 'package:agriguru/screens/splash_screem.dart';
+import 'package:agriguru/screens/SplashScreens/splash_screem1.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Permission.camera.request();
+  await Permission.microphone.request();
   runApp(const MyApp());
 }
 

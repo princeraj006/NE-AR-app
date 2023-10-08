@@ -1,7 +1,6 @@
 import 'package:agriguru/constants.dart';
 import 'package:agriguru/helpers.dart';
 import 'package:agriguru/providers/loginpage_provider.dart';
-import 'package:agriguru/screens/otp_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
