@@ -12,7 +12,7 @@ class _OnboardingScreen3State extends State<OnboardingScreen3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
@@ -27,7 +27,7 @@ class _OnboardingScreen3State extends State<OnboardingScreen3> {
               'COURSE & NEWS',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.white,
+                color: Colors.black,
                 fontSize: 22.sp,
                 fontFamily: 'Montserrat',
                 fontWeight: FontWeight.w700,
@@ -42,7 +42,7 @@ class _OnboardingScreen3State extends State<OnboardingScreen3> {
               'Got the key to knowledge? Time to unlock your brain. Stay informed, stay ahead - with latest and recent NEWS and Updates.',
               textAlign: TextAlign.center,
               style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 16.sp,
                   fontFamily: 'Montserrat',
                   fontWeight: FontWeight.w400,

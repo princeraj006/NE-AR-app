@@ -1,5 +1,6 @@
 import 'package:agriguru/helpers.dart';
 import 'package:agriguru/screens/location.dart';
+import 'package:agriguru/screens/map.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -16,7 +17,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           Container(
@@ -60,7 +61,7 @@ class _HomepageState extends State<Homepage> {
             'WAYS TO\nDISCOVER',
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: Colors.white,
+              color: Colors.black,
               fontSize: 25.sp,
               fontFamily: 'Montserrat',
               fontWeight: FontWeight.w700,
@@ -98,7 +99,7 @@ class _HomepageState extends State<Homepage> {
                           'AR',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontSize: 18.sp,
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.w700,
@@ -107,30 +108,37 @@ class _HomepageState extends State<Homepage> {
                       ],
                     ),
                   ),
-                  Column(
-                    children: [
-                      Container(
-                        height: 8.h,
-                        width: 8.h,
-                        decoration: BoxDecoration(
-                            color: hexToColor('#4725F3'),
-                            borderRadius: BorderRadius.circular(20)),
-                        child: const Image(image: AssetImage('assets/map.png')),
-                      ),
-                      SizedBox(
-                        height: 1.h,
-                      ),
-                      Text(
-                        'MAP',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18.sp,
-                          fontFamily: 'Montserrat',
-                          fontWeight: FontWeight.w700,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const MapScreen()));
+                    },
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 8.h,
+                          width: 8.h,
+                          decoration: BoxDecoration(
+                              color: hexToColor('#4725F3'),
+                              borderRadius: BorderRadius.circular(20)),
+                          child:
+                              const Image(image: AssetImage('assets/map.png')),
                         ),
-                      )
-                    ],
+                        SizedBox(
+                          height: 1.h,
+                        ),
+                        Text(
+                          'MAP',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 18.sp,
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.w700,
+                          ),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
@@ -143,7 +151,7 @@ class _HomepageState extends State<Homepage> {
                     return Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Colors.white,
+                        color: hexToColor('#4725F3'),
                       ),
                       child: SingleChildScrollView(
                         controller: scrollController,
@@ -156,7 +164,7 @@ class _HomepageState extends State<Homepage> {
                               'Suggestions ',
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                color: Colors.black,
+                                color: Colors.white,
                                 fontSize: 17.sp,
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.w700,
@@ -198,7 +206,7 @@ class _HomepageState extends State<Homepage> {
                                                 Text(
                                                   statesArray[index].country,
                                                   style: TextStyle(
-                                                    color: Colors.black,
+                                                    color: Colors.white,
                                                     fontSize: 19.sp,
                                                     fontFamily: 'Montserrat',
                                                     fontWeight: FontWeight.w700,
@@ -209,7 +217,7 @@ class _HomepageState extends State<Homepage> {
                                                 Text(
                                                   statesArray[index].state,
                                                   style: TextStyle(
-                                                    color: Colors.black,
+                                                    color: Colors.white,
                                                     fontSize: 15.sp,
                                                     fontFamily: 'Montserrat',
                                                     fontWeight: FontWeight.w400,
@@ -221,7 +229,7 @@ class _HomepageState extends State<Homepage> {
                                                   statesArray[index]
                                                       .description,
                                                   style: TextStyle(
-                                                    color: Colors.black,
+                                                    color: Colors.white,
                                                     fontSize: 14.sp,
                                                     fontFamily: 'Montserrat',
                                                     fontWeight: FontWeight.w200,

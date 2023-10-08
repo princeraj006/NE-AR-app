@@ -19,12 +19,6 @@ class _OtpScreenState extends State<OtpScreen> {
       body: SingleChildScrollView(
         child: Container(
           height: 100.h,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  colorFilter: ColorFilter.mode(
-                      Colors.black.withOpacity(0.5), BlendMode.darken),
-                  image: const AssetImage("assets/EXPLORE1.jpeg"),
-                  fit: BoxFit.cover)),
           child: SafeArea(
             child: Column(
               children: [

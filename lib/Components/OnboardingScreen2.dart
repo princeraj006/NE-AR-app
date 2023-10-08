@@ -12,7 +12,7 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
@@ -27,7 +27,7 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
               'GLOBAL VIEW',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.white,
+                color: Colors.black,
                 fontSize: 22.sp,
                 fontFamily: 'Montserrat',
                 fontWeight: FontWeight.w700,
@@ -42,7 +42,7 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
               'Embrace a world of  possibilities via Unity in Diversity through \n our global view.',
               textAlign: TextAlign.center,
               style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 16.sp,
                   fontFamily: 'Montserrat',
                   fontWeight: FontWeight.w400,

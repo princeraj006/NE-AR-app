@@ -3,6 +3,7 @@ import 'package:agriguru/Components/OnboardingScreen1.dart';
 import 'package:agriguru/Components/OnboardingScreen2.dart';
 import 'package:agriguru/Components/OnboardingScreen3.dart';
 import 'package:agriguru/screens/Homepage.dart';
+import 'package:agriguru/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 
@@ -20,12 +21,12 @@ class _OnboardingState extends State<Onboarding> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
         child: OnBoardingSlider(
           addController: true,
-          headerBackgroundColor: Colors.black,
+          headerBackgroundColor: Colors.white,
           finishButtonText: 'Register',
           onFinish: () => {
             Navigator.of(context)
@@ -47,7 +48,8 @@ class _OnboardingState extends State<Onboarding> {
           // ),
           addButton: true,
           speed: 1.8,
-          pageBackgroundColor: Colors.black,
+          pageBackgroundColor: Colors.white,
+          controllerColor: hexToColor(bluePrimaryColor),
           pageBodies: const [
             OnboardingScreen1(),
             OnboardingScreen2(),

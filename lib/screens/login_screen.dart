@@ -1,6 +1,7 @@
 import 'package:agriguru/constants.dart';
 import 'package:agriguru/helpers.dart';
 import 'package:agriguru/providers/loginpage_provider.dart';
+import 'package:agriguru/screens/Homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
@@ -30,12 +31,6 @@ class _LoginScreenState extends State<LoginScreen> {
       body: SingleChildScrollView(
         child: Container(
           height: 100.h,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  colorFilter: ColorFilter.mode(
-                      Colors.black.withOpacity(0.4), BlendMode.darken),
-                  image: const AssetImage("assets/EXPLORE1.jpeg"),
-                  fit: BoxFit.cover)),
           child: SafeArea(
             child: Column(
               children: [
@@ -53,9 +48,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         bottom: 15.h,
                       ),
                       width: 100.w,
-                      decoration: BoxDecoration(
-                          color: appBgColor,
-                          borderRadius: const BorderRadius.vertical(
+                      decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.vertical(
                               top: Radius.circular(30.0))),
                       child: Column(children: [
                         SizedBox(
@@ -71,7 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     text: 'Sign Up \n',
                                     style: TextStyle(
                                       fontSize: 24.sp,
-                                      color: hexToColor(appRootColor),
+                                      color: hexToColor(bluePrimaryColor),
                                       fontFamily: 'Roboto',
                                       letterSpacing: -0.5,
                                       fontWeight: FontWeight.w900,
@@ -79,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     children: <InlineSpan>[
                                       TextSpan(
                                         text:
-                                            "to Dive into AR,explore Earth,and witness \nclimate change's profound impact",
+                                            "to Dive into AR,explore Earth,and witness climate change's profound impact",
                                         style: TextStyle(
                                           fontSize: 20.sp,
                                           color: Colors.black,
@@ -113,61 +107,30 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             Expanded(
                               child: FormFieldContainer(
-                                hintText: "Phone Number",
-                                borderColor:
-                                    const Color.fromARGB(10, 224, 224, 224),
+                                hintText: "Enter your Phone Number",
+                                borderColor: const Color.fromARGB(255, 0, 0, 0),
                                 boxColor:
                                     const Color.fromARGB(0, 238, 238, 238),
                                 textColor: Colors.black.withOpacity(0.5),
                                 textInputType: TextInputType.phone,
                                 onTap: () {},
                                 controller: phoneNumberController,
-                                prefixIcon: SizedBox(
-                                  width: 23.w,
-                                  child: Row(
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsets.symmetric(
-                                            horizontal: 1.5.w),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(5),
-                                          child: Image(
-                                            image: const AssetImage(
-                                                "assets/india.png"),
-                                            width: 10.w,
-                                            fit: BoxFit.fill,
-                                          ),
-                                        ),
-                                      ),
-                                      Text(
-                                        "+91",
-                                        style: TextStyle(
-                                            fontSize: 17.sp,
-                                            color:
-                                                Colors.black.withOpacity(0.5),
-                                            fontFamily: 'Rubik',
-                                            fontWeight: FontWeight.w600,
-                                            letterSpacing: 2.5),
-                                      )
-                                    ],
-                                  ),
-                                ),
                                 suffixIcon: GestureDetector(
                                     onTap: () {
                                       phoneNumberController.text = "";
                                     },
                                     child: Container(
-                                        decoration: BoxDecoration(
+                                        decoration: const BoxDecoration(
                                             shape: BoxShape.circle,
-                                            color: const Color.fromARGB(
-                                                0, 189, 189, 189)),
+                                            color: Color.fromARGB(
+                                                255, 255, 255, 255)),
                                         margin: EdgeInsets.all(2.2.w),
                                         child: const Icon(
                                           Icons.close,
                                           color:
-                                              Color.fromARGB(14, 255, 255, 255),
+                                              Color.fromARGB(255, 52, 52, 52),
                                         ))),
+                                prefixIcon: null,
                               ),
                             ),
                             SizedBox(
@@ -185,9 +148,9 @@ class _LoginScreenState extends State<LoginScreen> {
                               _loginPageController.changeScreen();
                             },
                             borderRadius: 15,
-                            boxColor: hexToColor(appRootColor),
+                            boxColor: hexToColor(bluePrimaryColor),
                             text: 'Send OTP',
-                            textColor: appBgColor,
+                            textColor: Colors.white,
                           ),
                         ),
                         SizedBox(
@@ -213,7 +176,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                         text: 'Terms of Service',
                                         style: TextStyle(
                                           fontSize: 15.sp,
-                                          color: hexToColor(appRootColor),
+                                          color: hexToColor(bluePrimaryColor),
                                           fontFamily: 'Roboto',
                                           fontWeight: FontWeight.w700,
                                         ),
@@ -231,7 +194,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                         text: 'Privacy Policy ',
                                         style: TextStyle(
                                           fontSize: 15.sp,
-                                          color: hexToColor(appRootColor),
+                                          color: hexToColor(bluePrimaryColor),
                                           fontFamily: 'Roboto',
                                           fontWeight: FontWeight.w700,
                                         ),
@@ -266,21 +229,21 @@ class _LoginScreenState extends State<LoginScreen> {
                         SizedBox(
                           height: 2.h,
                         ),
-                        Row(
+                        const Row(
                           children: [
-                            GestureDetector(
-                                onTap: () {
-                                  _loginPageController.changeScreen();
-                                },
-                                child: Container(
-                                    decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    margin: EdgeInsets.all(2.2.w),
-                                    child: const Icon(
-                                      Icons.arrow_back_ios_new_rounded,
-                                      color: Colors.black,
-                                    ))),
+                            // GestureDetector(
+                            //     onTap: () {
+                            //       _loginPageController.changeScreen();
+                            //     },
+                            //     child: Container(
+                            //         decoration: const BoxDecoration(
+                            //           shape: BoxShape.circle,
+                            //         ),
+                            //         margin: EdgeInsets.all(2.2.w),
+                            //         child: const Icon(
+                            //           Icons.arrow_back_ios_new_rounded,
+                            //           color: Colors.black,
+                            //         ))),
                           ],
                         ),
                         Container(
@@ -292,7 +255,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: 23.sp,
-                                color: hexToColor(appRootColor),
+                                color: hexToColor(bluePrimaryColor),
                                 fontFamily: 'Roboto',
                                 letterSpacing: -0.5,
                                 fontWeight: FontWeight.w900,
@@ -324,7 +287,10 @@ class _LoginScreenState extends State<LoginScreen> {
                               fieldStyle: FieldStyle.box,
                               outlineBorderRadius: 10,
                               style: TextStyle(fontSize: 18.sp),
-                              onCompleted: (pin) {}),
+                              onCompleted: (pin) {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => const Homepage()));
+                              }),
                         ),
                         SizedBox(
                           height: 3.h,
@@ -334,9 +300,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Button(
                             onTap: () {},
                             borderRadius: 15,
-                            boxColor: hexToColor(appRootColor),
+                            boxColor: hexToColor(bluePrimaryColor),
                             text: 'Sign Up',
-                            textColor: Colors.black,
+                            textColor: Colors.white,
                           ),
                         ),
                         SizedBox(
@@ -362,7 +328,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 16.5.sp,
-                              color: hexToColor(appRootColor),
+                              color: hexToColor(bluePrimaryColor),
                               fontFamily: 'Roboto',
                               letterSpacing: 1,
                               fontWeight: FontWeight.w900,

@@ -12,7 +12,7 @@ class _OnboardingScreen4State extends State<OnboardingScreen4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
@@ -27,7 +27,7 @@ class _OnboardingScreen4State extends State<OnboardingScreen4> {
               'SOCIAL MEDIA',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.white,
+                color: Colors.black,
                 fontSize: 22.sp,
                 fontFamily: 'Montserrat',
                 fontWeight: FontWeight.w700,
@@ -42,7 +42,7 @@ class _OnboardingScreen4State extends State<OnboardingScreen4> {
               "Share the NEED OF THE HOUR, spread the word – let's go viral with the E certificate – the digital proof of your success!",
               textAlign: TextAlign.center,
               style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 16.sp,
                   fontFamily: 'Montserrat',
                   fontWeight: FontWeight.w400,

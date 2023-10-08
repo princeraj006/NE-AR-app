@@ -12,7 +12,7 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
@@ -29,7 +29,7 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
               'AR VIEW',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.white,
+                color: Colors.black,
                 fontSize: 22.sp,
                 fontFamily: 'Montserrat',
                 fontWeight: FontWeight.w700,
@@ -44,7 +44,7 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
               'Step into a new future with NE-AR magic & be the change with \n climate AR in your hands.',
               textAlign: TextAlign.center,
               style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 16.sp,
                   fontFamily: 'Montserrat',
                   fontWeight: FontWeight.w400,
